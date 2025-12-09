@@ -9,7 +9,7 @@ function Contact() {
         <div className="contact-info">
           <h2>We're here to help!</h2>
           <p>Email: support@shopnow.com</p>
-          <p>Phone: +91 98765 43210</p>
+          <p>Phone: +91 9641761540</p>
           <p>Address: Kolkata, West Bengal, India</p>
         </div>
 
