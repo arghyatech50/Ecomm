@@ -1,27 +1,31 @@
-import './App.css' 
-import { FaHome, FaEnvelope, FaInfoCircle } from 'react-icons/fa'; 
-  import { MdContactMail } from 'react-icons/md'; 
-  import { FaSearch } from 'react-icons/fa'; 
-   import { FaShoppingCart } from 'react-icons/fa'
-   import { FaTags } from 'react-icons/fa';
+import './App.css';
+import { Link } from 'react-router-dom';
+import { FaHome, FaEnvelope, FaInfoCircle, FaSearch, FaShoppingCart, FaTags } from 'react-icons/fa';
+import { MdContactMail } from 'react-icons/md';
 
 
-function Header(){
-    return(
-        <div id='header'>
-            <button className="head"> Home  <FaHome /></button>
-            <button className="head">Price <FaTags/></button>
-            <button className="head">Cart  <FaShoppingCart/></button> 
-            <button className="head">Contact <MdContactMail /></button>
-            <button className="head">About Us <FaInfoCircle /></button>
-            <button className="head">Email Us <FaEnvelope /></button> 
-            <div className="search-box">
-              <input type="text" placeholder="Search..." />
-              <button className="search-button"><FaSearch /></button>
-            </div>
-        </div>
+function Header() {
+return (
+<div id='header'>
 
-    )
-} 
 
-export default Header; 
+<Link to="/" className="head">Home <FaHome /></Link>
+<Link to="/price" className="head">Price <FaTags /></Link>
+<Link to="/cart" className="head">Cart <FaShoppingCart /></Link>
+<Link to="/contact" className="head">Contact <MdContactMail /></Link>
+<Link to="/about" className="head">About Us <FaInfoCircle /></Link>
+<Link to="/email" className="head">Email Us <FaEnvelope /></Link>
+
+
+<div className="search-box">
+<input type="text" placeholder="Search..." />
+<Link to="/search" className="search-button"><FaSearch /></Link>
+</div>
+
+
+</div>
+);
+}
+
+
+export default Header;
